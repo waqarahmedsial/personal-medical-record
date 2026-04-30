@@ -1,0 +1,2 @@
+import { useEffect, useState } from 'react';
+export default function LabResults() { const [data,setData]=useState<any[]>([]); useEffect(()=>{fetch('http://localhost:4000/lab-visits').then(r=>r.json()).then(setData).catch(()=>{});},[]); return <div className='content'><h1>Lab Results</h1><div className='card'>{data.map((v:any)=><div key={v._id}>{v.date} — {v.labName} ({v.results?.length||0} tests)</div>)}</div></div>; }

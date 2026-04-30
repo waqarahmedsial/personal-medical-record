@@ -1,0 +1,13 @@
+{
+  "name": "personal-medical-record",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "build": "npm run -w @pmr/api build && npm run -w @pmr/web build",
+    "dev": "concurrently \"npm run -w @pmr/api start:dev\" \"npm run -w @pmr/web dev\"",
+    "lint": "npm run -w @pmr/api lint && npm run -w @pmr/web lint"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

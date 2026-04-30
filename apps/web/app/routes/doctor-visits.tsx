@@ -1,0 +1,2 @@
+import { useEffect, useState } from 'react';
+export default function DoctorVisits() { const [data,setData]=useState<any[]>([]); useEffect(()=>{fetch('http://localhost:4000/doctor-visits').then(r=>r.json()).then(setData).catch(()=>{});},[]); return <div className='content'><h1>Doctor Visits</h1><div className='card'>{data.map((v:any)=><div key={v._id}>{v.date} — {v.doctor} ({v.prescriptions?.length||0} medicines)</div>)}</div></div>; }
