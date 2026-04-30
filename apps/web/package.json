@@ -1,0 +1,21 @@
+{
+  "name": "@pmr/web",
+  "private": true,
+  "scripts": {
+    "dev": "remix dev",
+    "build": "remix build",
+    "lint": "echo lint skipped"
+  },
+  "dependencies": {
+    "@remix-run/node": "^2.16.4",
+    "@remix-run/react": "^2.16.4",
+    "@remix-run/serve": "^2.16.4",
+    "echarts": "^5.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@remix-run/dev": "^2.16.4",
+    "typescript": "^5.6.3"
+  }
+}
